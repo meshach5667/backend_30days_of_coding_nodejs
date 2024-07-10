@@ -1,0 +1,162 @@
+[debug] [2024-06-21T04:24:28.057Z] ----------------------------------------------------------------------
+[debug] [2024-06-21T04:24:28.062Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2024-06-21T04:24:28.063Z] CLI Version:   13.11.3
+[debug] [2024-06-21T04:24:28.063Z] Platform:      linux
+[debug] [2024-06-21T04:24:28.064Z] Node Version:  v18.13.0
+[debug] [2024-06-21T04:24:28.064Z] Time:          Fri Jun 21 2024 05:24:28 GMT+0100 (West Africa Standard Time)
+[debug] [2024-06-21T04:24:28.065Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-21T04:24:28.078Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-21T04:24:28.079Z] > authorizing via signed-in user (meshachzakumi@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/meshach/StackUp-ThreeJS/introduction-three-js
+
+[info] ,
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-06-21T04:26:50.026Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-06-21T04:26:50.027Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"zakumi-stackup-threejs-intro","name":"zakumi-stackup-threejs-intro"}
+[debug] [2024-06-21T04:26:52.105Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-06-21T04:26:52.105Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-06-21T04:26:52.699Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID zakumi-stackup-threejs-intro. Please try again with a unique project ID.
+[debug] [2024-06-21T04:27:46.933Z] ----------------------------------------------------------------------
+[debug] [2024-06-21T04:27:46.938Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2024-06-21T04:27:46.939Z] CLI Version:   13.11.3
+[debug] [2024-06-21T04:27:46.940Z] Platform:      linux
+[debug] [2024-06-21T04:27:46.940Z] Node Version:  v18.13.0
+[debug] [2024-06-21T04:27:46.941Z] Time:          Fri Jun 21 2024 05:27:46 GMT+0100 (West Africa Standard Time)
+[debug] [2024-06-21T04:27:46.941Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-21T04:27:46.954Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-21T04:27:46.955Z] > authorizing via signed-in user (meshachzakumi@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/meshach/StackUp-ThreeJS/introduction-three-js
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-21T04:28:08.553Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2024-06-21T04:28:09.929Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2024-06-21T04:28:09.929Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2024-06-21T04:28:12.684Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase [none]
+[debug] [2024-06-21T04:28:13.602Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase 403
+[debug] [2024-06-21T04:28:13.603Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-06-21T04:28:13.605Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-06-21T04:28:14.213Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
+[debug] [2024-06-21T04:32:01.940Z] ----------------------------------------------------------------------
+[debug] [2024-06-21T04:32:01.946Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2024-06-21T04:32:01.947Z] CLI Version:   13.11.3
+[debug] [2024-06-21T04:32:01.947Z] Platform:      linux
+[debug] [2024-06-21T04:32:01.948Z] Node Version:  v18.13.0
+[debug] [2024-06-21T04:32:01.948Z] Time:          Fri Jun 21 2024 05:32:01 GMT+0100 (West Africa Standard Time)
+[debug] [2024-06-21T04:32:01.949Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-21T04:32:01.961Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-21T04:32:01.962Z] > authorizing via signed-in user (meshachzakumi@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/meshach/StackUp-ThreeJS/introduction-three-js
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-21T04:32:09.519Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2024-06-21T04:32:10.579Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2024-06-21T04:32:10.580Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2024-06-21T04:32:18.360Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase [none]
+[debug] [2024-06-21T04:32:19.778Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase 403
+[debug] [2024-06-21T04:32:19.779Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-06-21T04:32:19.780Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-06-21T04:32:20.548Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
+[debug] [2024-06-21T04:36:36.305Z] ----------------------------------------------------------------------
+[debug] [2024-06-21T04:36:36.310Z] Command:       /usr/bin/node /usr/local/bin/firebase init
+[debug] [2024-06-21T04:36:36.311Z] CLI Version:   13.11.3
+[debug] [2024-06-21T04:36:36.312Z] Platform:      linux
+[debug] [2024-06-21T04:36:36.312Z] Node Version:  v18.13.0
+[debug] [2024-06-21T04:36:36.313Z] Time:          Fri Jun 21 2024 05:36:36 GMT+0100 (West Africa Standard Time)
+[debug] [2024-06-21T04:36:36.313Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-21T04:36:36.325Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-21T04:36:36.327Z] > authorizing via signed-in user (meshachzakumi@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/meshach/StackUp-ThreeJS/introduction-three-js
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-21T04:36:43.114Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2024-06-21T04:36:44.193Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2024-06-21T04:36:44.193Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2024-06-21T04:36:45.353Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase [none]
+[debug] [2024-06-21T04:36:46.295Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase 403
+[debug] [2024-06-21T04:36:46.296Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/zakumi-stackup-threejs-intro:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-06-21T04:36:46.297Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-06-21T04:36:47.043Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.I just wrote to this fileI just wrote to this fileI just wrote to this file
