@@ -1,9 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Joi = require('joi');
+const admin = require('firebase-admin');
 
 const app = express();
 const port = 3000;
+
+app.use(bodyParser.json());
+
+
 
 app.use(bodyParser.json());
 
@@ -50,36 +55,6 @@ app.get('/books/:id', (req, res) => {
     }
 });
 
-// PUT method to update a book by ID
-app.put('/books/:id', (req, res) => {
-    const bookId = parseInt(req.params.id);
-    const index = books.findIndex(b => b.id === bookId);
-
-    if (index !== -1) {
-        // Validate the request body
-        if (!req.body.id || !req.body.title || !req.body.author) {
-            return res.status(400).send({ message: 'Invalid book details' });
-        }
-
-        books[index] = req.body;
-        res.status(200).send(books[index]);
-    } else {
-        res.status(404).send({ message: 'Book not found' });
-    }
-});
-
-// DELETE method to delete a book by ID
-app.delete('/books/:id', (req, res) => {
-    const bookId = parseInt(req.params.id);
-    const index = books.findIndex(b => b.id === bookId);
-
-    if (index !== -1) {
-        books.splice(index, 1);
-        res.status(204).send();
-    } else {
-        res.status(404).send({ message: 'Book not found' });
-    }
-});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
